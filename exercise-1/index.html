@@ -1,0 +1,54 @@
+
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Fagro</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="exercise-1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <!--Interpolation exercises-->
+    <div class="container">
+        <div class="row">
+            <div id="exercise">
+                <!-- 1) Fill the <p> below with your Name and Age - using Interpolation -->
+                <p>VueJS is pretty cool - {{fullname}} ({{age}})</p>
+                <!-- 2) Output your age, multiplied by 3 -->
+                <p>my age multiplied by 3: {{multiplyAgeBy3()}}</p>
+                <!-- 3) Call a function to output a random float between 0 and 1 (Math.random()) -->
+                <p>random float: {{getRandomFloat()}}</p>
+                <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
+                <div>
+                    <img style="width:100px;height:100px" v-bind:src="getGoogleImage()">
+                </div>
+                <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
+                <div>
+                    <input type="text" v-bind:value="fullname">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--Libraries-->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!--Custom app-->
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
