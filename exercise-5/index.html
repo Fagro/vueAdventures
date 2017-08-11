@@ -1,0 +1,63 @@
+<!doctype html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Fagro</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="exercise-1">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <!--Css classes-->
+    <div class="container">
+        <div class="row">
+            <div id="exercise">
+                <!-- 1) Hook up the button to toggle the display of the two paragraphs. Use both v-if and v-show and inspect the elements to see the difference -->
+                <div>
+                    <button @click="switcher">Toggle</button>
+                    <p v-if="show">You either see me ...</p>
+                    <p v-if="!show">...or me</p>
+                    <p v-show="hide">You either see me ...</p>
+                    <p v-show="!hide">...or me</p>
+                </div>
+                <!-- 2) Output an <ul> of array elements of your choice. Also print the index of each element. -->
+                <ul>
+                    <li v-for="(item, i) in array"> {{ item }} ({{i}})</li>
+                </ul>
+                <!-- 3) Print all key-value pairs of the following object: {title: 'Lord of the Rings', author: 'J.R.R. Tolkiens', books: '3'}. Also print the index of each item. -->
+                <ul>
+                    <li v-for="(value, key, i) in myObject"> {{key}}: {{value}} ({{i}})</li>
+                </ul>
+                <!-- 4) Print the following object (only the values) and also create a nested loop for the array: {name: 'TESTOBJECT', data: [1.67, 1.33, 0.98, 2.21]} (hint: use v-for and v-if to achieve this) -->
+                <ul>
+                    <li v-for="(value, key, i) in testData">
+                        {{value}}
+                    
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--Libraries-->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <!--Custom app-->
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
