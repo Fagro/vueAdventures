@@ -10,9 +10,9 @@
 
 <script>
 
-import Header from './Header.vue'
-import Footer from './Footer.vue'
-import ServerIndex from './ServerIndex.vue'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+import ServerIndex from './components/ServerIndex.vue'
 
 export default {
   components: {

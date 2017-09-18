@@ -17,4 +17,7 @@ export default {
   }
 }
 </script>
+<style scoped>
+    .row { border: 1px thin blue};
+</style>
 
