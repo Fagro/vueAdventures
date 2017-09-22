@@ -14,9 +14,10 @@
         <button class="btn btn-primary" @click="submitUser">Submit</button>
         <hr>
         <button class="btn primary" @click="fetchData">get data</button>
-        <ul>
+        <hr>
+        <ul class="list-group">
           <li class="list-group-item" v-for="item in users">
-            {{item.username - item.email}}
+            {{item.username}} - {{item.email}}
           </li>
         </ul>
       </div>
@@ -39,7 +40,7 @@ export default {
     submitUser() {
       console.log('user submitted', this.user);
       this.$http
-        .post('https://vuejs-http-e03ed.firebaseio.com/data.json', this.user)
+        .post('', this.user)
         .then(response => {
           console.log('the response ', response)
         }, error => {
@@ -47,7 +48,7 @@ export default {
         })
     },
     fetchData() {
-      this.$http.get('https://vuejs-http-e03ed.firebaseio.com/data.json')
+      this.$http.get('')
         .then(response => {
           return response.json()
         })
@@ -57,6 +58,7 @@ export default {
             resultArray.push(data[key])
           }
           this.users = resultArray
+          console.log(data);
         })
     }
   }
